@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { AddCategory, GifGrid } from './components'
 
+import PropTypes from 'prop-types'
+
 export const GifExpertApp = () => {
 
     // necesitamos un hook para mantener el estado
@@ -28,11 +30,11 @@ export const GifExpertApp = () => {
                 />
                 )                
             )}
-
-
                 {/* GIF-item */}
-
-
         </>
     )
+}
+
+GifExpertApp.propTypes = {
+    onAddCategory: PropTypes.func.isRequired,
 }
